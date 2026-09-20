@@ -1,15 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
-        <meta charset="UTF-8" />
-        <title>Title</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1 class="title">Hello World</h1>
-        <div id="mainDiv">Hello Div</div>
-        <br />
-        <button onclick="buttonClicked()">Click me</button>
+        <h1> Hanan's Portfolio</h1>
+       <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#interests">Interests</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#future">Future Goal</a>
+    <a href="#contact">Contact</a>
+</nav>
+       
+        <section id="about">
+            <h3>About me </h3>
+            <p> 
+            I was born in Syria and had a simple and happy childhood.
+                When I was four years old, my family moved to Saudi Arabia.
+                One of my favorite childhood memories is our summer road trips
+                between Damascus and Riyadh.
+            </p>
+            <p>
+             The journey took around 24 hours. My father drove the car,
+                my mother sat next to him, and my five siblings and I sat in the back.
+                We spent the long journey laughing, playing games, telling jokes
+                and listening to music when we got tired.
+            </p>
+            <p>
+             Even simple food tasted special during those trips.
+                A cheese or mortadella sandwich felt different when we ate it
+                together on the road. These journeys are still some of my
+                happiest childhood memories.
+            </p>
+        </section>
+        
+        <section id="interests">
+            <h3> My interests</h3>
+            <h4> Technology</h4>
+            <p> 
+            I chose to study IT because I have always been interested in
+                technology and following its development. I wanted to study
+                something that I really enjoy and turn that interest into my
+                future career. 
+            </p>
+            <h4>Cooking</h4>
+            <p>
+               After becoming a mother, I discovered another interest: cooking.
+                I enjoy trying different recipes and being creative in the kitchen.
+                One of the things that motivates me is preparing delicious meals
+                for my daughter.
+            </p>
+        </section>
+        
+        <h3>Things I Enjoy</h3>
+        <ul>
+            <li>Web development</li>
+            <li> Cooking </li>
+            <li> Spend time with my doughter </li>
+            <li> Learning new things</li>
+        </ul>
+        
+        <h3> My skills</h3>
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Experience</th>
+            </tr>
+            
+            <tr>
+                <th>HTML </th>
+                <th> Creating web page structures</th>
+            </tr>
+            
+            <tr>
+                <th>Java</th>
+                <th> Programming and university projects</th>
+            </tr>
+            
+            <tr>
+                <th>CSS</th>
+                <th>Styling responsive web pages</th>
+            </tr>
+        </table>
+        
+        <section id="future">
+            <h3> My Future Goal</h3>
+            <p>
+            My future goal is to become a skilled web developer and create
+                websites that are useful, accessible and visually appealing.
+                I want to continue learning and improving my skills in web development.
+            </p>
+            
+            <p>
+            At the same time, one of my most important personal goals is to
+                be a great mother. I hope to build a career that I enjoy while
+                also being present for my daughter.
+            </p>
+        </section>
+        
+        <section id="contact">
+            <h3>Coontact me</h3>
+            <p> 
+            If you would like to contact me, you can send me a message
+                using the form below.
+            </p>
+        <form action="mailto:hananalasrawi95@gmail.com" method="post" enctype="text/plain" >
+            
+            <label for="name">Name </label>
+            <input typ="text" id="name" name="name" required><br>
+            
+            <label for="email">Email</label>
+            <input typ="email" id="email" name="email" required><br>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+            
+            </form>
+            
+        </section>
+        
+        <section id="gallary">
+            <h3> A littel part of my life.</h3>
+            <img src="images/workspace.jpg"
+                 alt="My workspace where I study and work on programming projects">
+            <img src="images/cooking.jpg"
+                 alt="A meal that I prepared at home">
+            <img src="images/Coffe.jpg"
+                 alt="A cup of Coffee in nature">
+        </section>
+        
+    <footer> 
+        <p>Contact: hananalasrawi95@gmail.com</p>
+        <p>&copy; 2026 Hanan. All rights reserved.</p>
+
+        </footer>
+      
+        
     </body>
+    
+    
 </html>
