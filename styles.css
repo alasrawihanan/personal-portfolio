@@ -5,28 +5,91 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f8f5f2;
+    background-color: #A6BAEE;
     color: #333;
     line-height: 1.6;
 }
 
-header {
-    background-color: #7a5c61;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+nav{
+    background-color: rgba(225,225,225,0.95);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.20); 
+    
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-header h1 {
-    margin: 0 0 20px;
-}
-
-nav a {
-    color: black;
+nav a{
     text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+    color: #2b1768;
+    font-size: 17px;
+    font-weight: 500;
 }
+
+
+
+.hero{
+    min-height: 650px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    gap: 50px;
+    background-color: #312048;
+    line-height: 1;
+    border-radius: 15%;
+    
+}
+.hero-text{
+    flex: 1;
+    font-family: serif;
+}
+
+.hello{
+    font-size: 30px;
+    color: #DBC9F9
+}
+
+.hero-text h1{
+    font-size: 80px;
+    margin: 0;
+    color:#DBC9F9
+}
+
+.hero-text h2{
+    font-size: 25px;
+    margin: 10px 20px;
+    color: #DBC9F9;
+    
+}
+.intro{
+    font-size: 25px;
+    line-height: 1.6;
+    max-width: 550px;
+    color: #DBC9F9
+}
+.hero-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
 
 main {
     max-width: 1000px;
@@ -35,40 +98,68 @@ main {
 }
 
 section {
-    background-color: white;
+    background-color: #DBC9F9;
     margin: 25px 0;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 50px; 
 }
 
-h2 {
-    color: #7a5c61;
+.sections-container{
+    display: flex;
+    gap:40px;
+}
+#about,
+#interests,
+#future{
+    flex: 1;
+}
+
+.sections-container2{
+    display: flex;
+    gap: 40px;
+    
+}
+
+#enjoy,
+#skills,
+#contact{
+    flex: 1;
+   
+    
 }
 
 img {
-    width: 60%;
-    max-width: 280px;
-    height: 250px;
+    width:60%;
+    max-width: 380px;
     object-fit: cover;
-    margin: 10px;
+    margin-top: 10px;
     border-radius: 10px;
+    height: 400px;
+   
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    border: 3px solid black;
+    font-family: serif;
+    font-weight: normal;
+   
+    
 }
 
 th,
 td {
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     padding: 12px;
     text-align: left;
+     border-radius: 10px;
+       
 }
 
 th {
-    background-color: #eee5e6;
+    background-color: #bc7ebf;
 }
 form{
     display: flex;
@@ -80,9 +171,17 @@ label{
     font-weight: bold;
 }
 
+#contact{
+    background-color: #312048;
+    border-radius: 30px;
+    color: white;
+    max-width: max-content;
+}
+
 input,
 textarea{
     width: 100%;
+    max-width: 550px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -94,24 +193,24 @@ button{
     margin-top: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #7a5c61;
+    background-color: #be68a9;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
 footer {
-    background-color: #7a5c61;
+    background-color: #384f95;
     color: white;
     text-align: center;
     padding: 20px;
 }
 /*Hover effect*/
 nav a:hover{
-    color: deepskyblue; 
+    color:#bc7ebf; 
     text-decoration: underline;
 }
 button:hover{
-    color: deepskyblue;
+    color: #bc7ebf;
 }
 
 /*Keyborad focus*/
@@ -119,49 +218,145 @@ nav a:focus,
 button:focus,
 input:focus,
 textarea:focus{
-        outline: 3px solid #d9a5ad;
+     outline: 3px solid #bc7ebf;
     outline-offset: 3px;
 }
 
-/* Responsive design for smallar screens*/
+/* Responsive design for smaller screens */
 
-@media (max-width:600px){
-    header{
-        padding: 20px 10px;
-    }
-    
+@media (max-width: 600px) {
+
+    /* Navigation */
     nav {
-        display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        padding: 15px;
+        border-radius: 0 0 15px 15px;
     }
-    
-    nav a{
+
+    nav a {
         margin: 0;
+        font-size: 16px;
     }
-    
-    main{
+
+
+    /* Hero section */
+    .hero {
+        min-height: auto;
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 25px;
+        text-align: center;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hello {
+        font-size: 22px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .intro {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+
+    /* Hero image */
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+
+    /* Main content */
+    main {
+        width: 100%;
         padding: 10px;
     }
-    
-    section{
+
+
+    /* Put cards under each other */
+    .sections-container,
+    .sections-container2 {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #about,
+    #interests,
+    #future,
+    #enjoy,
+    #skills,
+    #contact {
+        width: 100%;
+    }
+
+
+    /* Sections */
+    section {
         padding: 20px;
         margin: 15px 0;
+        border-radius: 25px;
     }
-    
-    img{
-           width: 100%;
+
+
+    /* Gallery images */
+    img {
+        width: 100%;
         max-width: 100%;
         height: auto;
         margin: 10px 0;
     }
+
+
+    /* Table */
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+
+    /* Contact form */
+    #contact {
+        max-width: 100%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
     button {
         width: 100%;
     }
 
-    table {
-        font-size: 14px;
+
+    /* Footer */
+    footer {
+        padding: 15px 10px;
     }
 }
-
-
