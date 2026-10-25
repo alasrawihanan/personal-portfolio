@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanan's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="feedback.js" defer></script>
     </head>
     <body>
    
@@ -166,18 +167,105 @@
             If you would like to contact me, you can send me a message
                 using the form below.
             </p>
-        <form action="mailto:hananalasrawi95@gmail.com" method="post" enctype="text/plain" >
+        <form id="feedbackForm" novalidate>
             
-            <label for="name">Name </label>
-            <input typ="text" id="name" name="name" required><br>
-            
-            <label for="email">Email</label>
-            <input typ="email" id="email" name="email" required><br>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+<div class="form-group">
+    <label for="fullName">Full Name</label>
 
-            <button type="submit">Send Message</button>
+    <input
+        type="text"
+        id="fullName"
+        name="fullName"
+        aria-describedby="nameError"
+        required
+    >
+
+    <span id="nameError" class="error-message"></span>
+</div>
+            
+<div class="form-group">
+    <label for="email">Email</label>
+
+    <input
+        type="email"
+        id="email"
+        name="email"
+        aria-describedby="emailError"
+        required
+    >
+
+    <span id="emailError" class="error-message"></span>
+</div>
+            
+<div class="form-group">
+    <label for="topic">Topic of Interest</label>
+
+    <select
+        id="topic"
+        name="topic"
+        aria-describedby="topicError"
+        required
+    >
+        <option value="">Select a topic</option>
+        <option value="web">Web Development</option>
+        <option value="programming">Programming</option>
+        <option value="collaboration">Collaboration</option>
+    </select>
+
+    <span id="topicError" class="error-message"></span>
+</div>
+
+            
+           
+<div class="form-group">
+    <label for="comments">Comments</label>
+
+    <textarea
+        id="comments"
+        name="comments"
+        rows="5"
+        minlength="15"
+        aria-describedby="commentsCounter commentsError"
+        required
+    ></textarea>
+
+    <small id="commentsCounter">
+        0 characters (minimum 15 required)
+    </small>
+
+    <span id="commentsError" class="error-message"></span>
+</div>
+        
+
+<div class="form-group">
+    <label for="website">Website (Optional)</label>
+
+    <input
+        type="url"
+        id="website"
+        name="website"
+        placeholder="https://example.com"
+        aria-describedby="websiteError"
+    >
+
+    <span id="websiteError" class="error-message"></span>
+</div>
+
+
+
+           
+<div class="form-buttons">
+    <button type="submit" id="submitBtn">
+        Submit
+    </button>
+
+    <button type="button" id="clearBtn">
+        Clear
+    </button>
+</div>
+
+<p id="formStatus" role="status" aria-live="polite"></p>
+
             
             </form>
             
